@@ -1,12 +1,16 @@
-import "./NavBar.css";
-
 const NavBar = () => {
   return (
-    <>
-      <div className="navBar">Home</div>
-      <div className="navBar">Explore</div>
-      <div className="navBar">Settings</div>
-    </>
+    <div>
+      <p>
+        <a href="#">Home</a>
+      </p>
+      <p>
+        <a href="#">Profile</a>
+      </p>
+      <p>
+        <a href="#">Logout</a>
+      </p>
+    </div>
   );
 };
 

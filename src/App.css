@@ -1,7 +1,11 @@
-.App {
-  text-align: center;
+.twoSideGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.flexCentered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

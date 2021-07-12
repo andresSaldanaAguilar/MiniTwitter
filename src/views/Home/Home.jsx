@@ -4,10 +4,10 @@ import Feed from "../../components/Feed/Feed";
 const Home = () => {
   return (
     <div className="twoSideGrid">
-      <div>
+      <div className="flexCentered">
         <NavBar />
       </div>
-      <div className="inputSide">
+      <div className="flexCentered">
         <Feed />
       </div>
     </div>
