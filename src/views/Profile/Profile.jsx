@@ -1,5 +1,5 @@
-import NavBar from "../../components/NavBar/NavBar";
-import Feed from "../../components/Feed/Feed";
+import NavBar from "../../components/NavBar";
+import Feed from "../../components/Feed";
 import user from "../../mocks/user.json";
 import "./Profile.css";
 

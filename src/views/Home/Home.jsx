@@ -1,5 +1,5 @@
-import NavBar from "../../components/NavBar/NavBar";
-import Feed from "../../components/Feed/Feed";
+import NavBar from "../../components/NavBar";
+import Feed from "../../components/Feed";
 
 const Home = () => {
   return (

@@ -1,7 +1,7 @@
 import "./App.css";
-import Login from "./views/Login/Login";
-import Home from "./views/Home/Home";
-import Profile from "./views/Profile/Profile";
+import Login from "./views/Login";
+import Home from "./views/Home";
+import Profile from "./views/Profile";
 
 function App() {
   return <Profile />;
