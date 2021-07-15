@@ -1,5 +1,5 @@
-import logo from "../../img/logo.png";
-import "./Login.css";
+import logo from '../../img/logo.png';
+import './Login.css';
 
 const Login = () => {
   return (
