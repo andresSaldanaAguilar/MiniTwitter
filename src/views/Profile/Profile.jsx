@@ -10,16 +10,12 @@ const userInfo = () => (
       className="profileBackground"
       alt="profileBackground"
     />
-    <img src={user.image} className="profileImage" alt='profileImage' />
+    <img src={user.image} className="profileImage" alt="profileImage" />
     <h1>{user.name}</h1>
     <p>{`@${user.username}`}</p>
-
-
-
     <p>{user.description}</p>
   </div>
 );
-const d;
 
 const Profile = () => {
   return (
