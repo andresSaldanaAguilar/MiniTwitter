@@ -1,6 +1,6 @@
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
 import './App.css';
-import Login from './views/Login';
-import Home from './views/Home';
 import Profile from './views/Profile';
 
 function App() {

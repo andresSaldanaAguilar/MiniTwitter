@@ -1,3 +1,4 @@
+import React from 'react';
 import NavBar from '../../components/NavBar';
 import Feed from '../../components/Feed';
 import user from '../../mocks/user.json';
@@ -17,20 +18,18 @@ const userInfo = () => (
   </div>
 );
 
-const Profile = () => {
-  return (
-    <div className="twoSideGrid">
-      <div className="flexCentered">
-        <NavBar />
-      </div>
-      <div className="flexCentered">
-        <div>
-          {userInfo()}
-          <Feed />
-        </div>
+const Profile = () => (
+  <div className="twoSideGrid">
+    <div className="flexCentered">
+      <NavBar />
+    </div>
+    <div className="flexCentered">
+      <div>
+        {userInfo()}
+        <Feed />
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default Profile;
