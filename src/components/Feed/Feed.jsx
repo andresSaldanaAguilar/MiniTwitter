@@ -1,12 +1,28 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
+const spy = (e) => {
+  console.log('Im a spy');
+  if (e.target.value.includes('hi')) {
+    console.log(e.target.value);
+  } else console.log('not said hi');
+};
+
+const renderchunk = () => {
+  const element = 'p';
+  if (element === 'p') {
+    return <p>Im a p</p>;
+  }
+  return <div>Im a div</div>;
+};
+
 const Feed = () => (
   <div>
     <div>
       <label>Write somethig: </label>
-      <input />
+      <input onChange={spy} />
     </div>
+    {renderchunk()}
     <div>
       <div>
         <h2>John Doe @johndoe</h2>
