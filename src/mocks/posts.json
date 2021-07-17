@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "author": {
+      "name": "John Doe",
+      "username": "johndoe",
+      "image": "https://pbs.twimg.com/profile_images/900415650098630656/25SUYk_8_400x400.jpg"
+    },
+    "content": "Hello world! This is my first tweet, yay!",
+    "comments": 0,
+    "likes": 0,
+    "retweets": 0,
+    "createdAt": "2021-07-17T00:46:51.062Z"
+  },
+  {
+    "id": 2,
+    "author": {
+      "name": "Cherisse",
+      "username": "CherisseCheesse",
+      "image": "https://i1.sndcdn.com/avatars-000056895824-8x4c1r-t500x500.jpg"
+    },
+    "content": "I like cheese a lot",
+    "comments": 0,
+    "likes": 0,
+    "retweets": 0,
+    "createdAt": "2021-07-17T01:46:51.062Z"
+  },
+  {
+    "id": 3,
+    "author": {
+      "name": "The Big O",
+      "username": "TheRealisticNotation",
+      "image": "https://avatarfiles.alphacoders.com/615/thumb-61571.jpg"
+    },
+    "content": "I like to be realistic.",
+    "comments": 0,
+    "likes": 0,
+    "retweets": 0,
+    "createdAt": "2021-07-17T02:46:51.062Z"
+  }
+]
