@@ -3,6 +3,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Feed from './Feed';
 
-test('Link changes the class when hovered', () => {
-  renderer.create(<Feed />);
+describe('spy function', () => {
+  it('should test when not saying hi', () => {
+    renderer.create(<Feed />);
+  });
 });

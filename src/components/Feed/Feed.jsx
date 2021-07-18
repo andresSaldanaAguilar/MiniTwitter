@@ -6,23 +6,17 @@ const spy = (e) => {
   if (e.target.value.includes('hi')) {
     console.log(e.target.value);
   } else console.log('not said hi');
-};
-
-const renderchunk = () => {
-  const element = 'p';
-  if (element === 'p') {
-    return <p>Im a p</p>;
-  }
-  return <div>Im a div</div>;
+  if (e.target.value.includes('bye')) {
+    console.log(e.target.value);
+  } else console.log('not said goodbye');
 };
 
 const Feed = () => (
   <div>
     <div>
       <label>Write somethig: </label>
-      <input onChange={spy} />
+      <input onChange={spy} name="newpost" />
     </div>
-    {renderchunk()}
     <div>
       <div>
         <h2>John Doe @johndoe</h2>
