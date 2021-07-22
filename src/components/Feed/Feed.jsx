@@ -1,44 +1,36 @@
+/* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
+import tweets from '../../mocks/posts.json';
 
-const spy = (e) => {
-  console.log('Im a spy');
-  if (e.target.value.includes('hi')) {
-    console.log(e.target.value);
-  } else console.log('not said hi');
-};
+import Post from '../Post';
 
-const renderchunk = () => {
-  const element = 'p';
-  if (element === 'p') {
-    return <p>Im a p</p>;
-  }
-  return <div>Im a div</div>;
+const orderByCreationDate = (a, b) => {
+  const timeA = new Date(a.createdAt).getTime();
+  const timeB = new Date(b.createdAt).getTime();
+  return timeB - timeA;
 };
 
 const Feed = () => (
   <div>
     <div>
       <label>Write somethig: </label>
-      <input onChange={spy} />
+      <input />
     </div>
-    {renderchunk()}
     <div>
-      <div>
-        <h2>John Doe @johndoe</h2>
-        <p>Hello world! This is my first tweet, yay!</p>
-        <p>Comments: 0 Likes: 0 Retweets: 0</p>
-      </div>
-      <div>
-        <h2>Cherisse @CherisseCheesse</h2>
-        <p>I like cheese a lot</p>
-        <p>Comments: 0 Likes: 0 Retweets: 2</p>
-      </div>
-      <div>
-        <h2>The Big O @TheRealisticNotation</h2>
-        <p>I like to be realistic.</p>
-        <p>Comments: 0 Likes: 1 Retweets: 0</p>
-      </div>
+      {tweets.sort(orderByCreationDate).map((tweet) => (
+        <Post
+          key={`tweet-${tweet.id}`}
+          name={tweet.author.name}
+          username={tweet.author.username}
+          avatar={tweet.author.image}
+          content={tweet.content}
+          comments={tweet.comments}
+          likes={tweet.likes}
+          retweets={tweet.retweets}
+          createdAt={tweet.createdAt}
+        />
+      ))}
     </div>
   </div>
 );
