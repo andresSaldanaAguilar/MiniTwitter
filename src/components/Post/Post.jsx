@@ -5,11 +5,12 @@ import moment from 'moment';
 import {
   // breakline
   PostWrapper,
+  Avatar,
 } from './Post.styled';
 
 const Post = ({ name, username, avatar, content, comments, retweets, likes, createdAt }) => (
   <PostWrapper>
-    <img src={avatar} alt="the avatar" />
+    <Avatar src={avatar} alt="the avatar" />
     <h2>
       {name} @{username}
     </h2>

@@ -5,7 +5,7 @@ import tweets from '../../mocks/posts.json';
 
 import Post from '../Post';
 
-const orderByCreationDate = (a, b) => {
+export const orderByCreationDate = (a, b) => {
   const timeA = new Date(a.createdAt).getTime();
   const timeB = new Date(b.createdAt).getTime();
   return timeB - timeA;
@@ -13,10 +13,6 @@ const orderByCreationDate = (a, b) => {
 
 const Feed = () => (
   <div>
-    <div>
-      <label>Write somethig: </label>
-      <input />
-    </div>
     <div>
       {tweets.sort(orderByCreationDate).map((tweet) => (
         <Post
