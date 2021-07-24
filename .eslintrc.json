@@ -2,8 +2,7 @@
   "extends": ["airbnb", "prettier", "eslint:recommended"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": ["warn"],
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    "prettier/prettier": ["error"]
   },
   "env": {
     "jest": true

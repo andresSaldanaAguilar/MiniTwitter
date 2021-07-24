@@ -3,23 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "moment": "^2.29.1",
-    "prop-types": "^15.7.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "eslint-config-airbnb": "^18.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "styled-components": "^5.3.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
-    "eject": "react-scripts eject",
-    "lint": "eslint . --ext js",
-    "lint:fix": "npm run lint -- --fix",
-    "prettier": "prettier \"**/*.{js,json}\" --check",
-    "prettier:fix": "npm run prettier -- --write"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -39,40 +36,16 @@
       "last 1 safari version"
     ]
   },
-  "lint-staged": {
-    "*.{js, jsx, css, json}": [
-      "npm run prettier:fix",
-      "npm run lint"
-    ]
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.14.7",
-    "@babel/preset-react": "^7.14.5",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^7.0.1",
-    "jest-styled-components": "^7.0.5",
-    "lint-staged": "^11.1.0",
-    "prettier": "^2.3.2",
-    "react-test-renderer": "^17.0.2"
-  },
-  "jest": {
-    "coverageThreshold": {
-      "global": {
-        "branches": 60,
-        "functions": 60,
-        "lines": 60,
-        "statements": 60
-      }
-    }
+    "lint-staged": "^11.0.1",
+    "prettier": "^2.3.2"
   }
 }
