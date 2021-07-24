@@ -37,5 +37,44 @@
     "likes": 0,
     "retweets": 0,
     "createdAt": "2021-07-19T02:46:51.062Z"
+  },
+  {
+    "id": 4,
+    "author": {
+      "name": "Wizeline",
+      "username": "wizeline",
+      "image": "https://avatars.githubusercontent.com/u/6192875?s=200&v=4"
+    },
+    "content": "Follow us for wize content",
+    "comments": 2,
+    "likes": 3,
+    "retweets": 4,
+    "createdAt": "2021-07-18T03:46:51.062Z"
+  },
+  {
+    "id": 6,
+    "author": {
+      "name": "Wizeline",
+      "username": "wizeline",
+      "image": "https://avatars.githubusercontent.com/u/6192875?s=200&v=4"
+    },
+    "content": "For some case studies please see our wepage",
+    "comments": 2,
+    "likes": 1,
+    "retweets": 2,
+    "createdAt": "2021-07-11T04:46:51.062Z"
+  },
+  {
+    "id": 5,
+    "author": {
+      "name": "Wizeline",
+      "username": "wizeline",
+      "image": "https://avatars.githubusercontent.com/u/6192875?s=200&v=4"
+    },
+    "content": "Wizeline Academy React bootcamp just started",
+    "comments": 2,
+    "likes": 3,
+    "retweets": 4,
+    "createdAt": "2021-07-17T04:46:51.062Z"
   }
 ]

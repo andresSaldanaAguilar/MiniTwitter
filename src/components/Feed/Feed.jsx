@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import tweets from '../../mocks/posts.json';
-
 import Post from '../Post';
 
 export const orderByCreationDate = (a, b) => {
