@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import NavBar from '../../components/NavBar';
 import Feed from '../../components/Feed';
 import './Profile.css';
+import user from '../../mocks/user.json';
+
 const Avatar = styled.img`
   width: 100px;
   height: 100px;
@@ -26,7 +28,7 @@ const Profile = () => (
     </div>
     <div className="flexCentered">
       <div>
-        <ProfileCard />
+        {userInfo()}
         <Feed />
       </div>
     </div>

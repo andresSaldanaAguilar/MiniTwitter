@@ -77,7 +77,7 @@
         "lines": 60,
         "statements": 60
       }
-    }
+    },
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^7.0.1",
