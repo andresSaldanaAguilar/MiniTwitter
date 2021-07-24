@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered 1`] = `
+<div>
+  <p>
+    <a
+      href="#"
+    >
+      Home
+    </a>
+  </p>
+  <p>
+    <a
+      href="#"
+    >
+      Profile
+    </a>
+  </p>
+  <p>
+    <a
+      href="#"
+    >
+      Logout
+    </a>
+  </p>
+</div>
+`;
