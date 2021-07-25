@@ -23,6 +23,7 @@ const userInfo = () => (
 
 const Profile = () => (
   <AppLayout
+    gridTemplateCol="30% 70%"
     rightSide={{
       content: (
         <div>
