@@ -30,6 +30,7 @@ const loginForm = () => (
 
 const Login = () => (
   <AppLayout
+    gridTemplateCol="50% 50%"
     leftSide={{ content: <Logo src={logo} alt="logo" />, bgColor: 'rgb(67, 154, 254)' }}
     rightSide={{ content: loginForm() }}
   />
