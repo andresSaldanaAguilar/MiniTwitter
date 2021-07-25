@@ -6,7 +6,7 @@ import NavBar from '../NavBar';
 import { Grid, LayoutSide } from './AppLayout.Styled';
 
 const AppLayout = (props) => {
-  const { leftSide = { content: <NavBar /> }, rightSide, gridTemplateCol = '50% 50%' } = props;
+  const { leftSide = { content: <NavBar /> }, rightSide, gridTemplateCol = '25% 75%' } = props;
   return (
     <Grid gridTemplateCol={gridTemplateCol}>
       <LayoutSide bgColor={leftSide.bgColor}>{leftSide.content}</LayoutSide>

@@ -1,10 +1,9 @@
 /* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import logo from '../../img/logo.png';
 import user from '../../mocks/user.json';
-import { InputLabel, InputText, Button } from '../../common/Elements.styled';
-import { LoginInputs, Logo } from './Login.styled';
+import { InputLabel, InputText, Button, Logo } from '../../common/Elements.styled';
+import LoginInputs from './Login.styled';
 import AppLayout from '../../components/AppLayout';
 
 const handleSubmit = (event) => {
@@ -22,16 +21,13 @@ const loginForm = () => (
     <InputText type="text" />
     <InputLabel>Password</InputLabel>
     <InputText type="text" />
-    <Button type="submit" bgColor="rgb(67, 154, 254)">
-      Log In
-    </Button>
+    <Button type="submit">Log In</Button>
   </LoginInputs>
 );
-
 const Login = () => (
   <AppLayout
     gridTemplateCol="50% 50%"
-    leftSide={{ content: <Logo src={logo} alt="logo" />, bgColor: 'rgb(67, 154, 254)' }}
+    leftSide={{ content: <Logo height="200px" />, bgColor: 'rgb(67, 154, 254)' }}
     rightSide={{ content: loginForm() }}
   />
 );
