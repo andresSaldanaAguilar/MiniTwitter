@@ -1,16 +1,7 @@
 import React from 'react';
-import NavBar from '../../components/NavBar';
 import Feed from '../../components/Feed';
+import AppLayout from '../../components/AppLayout';
 
-const Home = () => (
-  <div className="twoSideGrid">
-    <div className="flexCentered">
-      <NavBar />
-    </div>
-    <div className="flexCentered">
-      <Feed />
-    </div>
-  </div>
-);
+const Home = () => <AppLayout rightSide={{ content: <Feed /> }} />;
 
 export default Home;

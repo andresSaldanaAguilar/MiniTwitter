@@ -1,10 +1,9 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import './App.css';
-import Home from './views/Home';
+import Profile from './views/Profile';
 
 function App() {
-  return <Home />;
+  return <Profile />;
 }
 
 export default App;

@@ -2,8 +2,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import logo from '../../img/logo.png';
-import './Login.css';
 import user from '../../mocks/user.json';
+import { InputLabel, InputText, Button } from '../../App.Styled';
+import { LoginInputs, Logo } from './Login.styled';
+import AppLayout from '../../components/AppLayout';
 
 const handleSubmit = (event) => {
   event.preventDefault();
@@ -15,25 +17,22 @@ const handleSubmit = (event) => {
 };
 
 const loginForm = () => (
-  <form onSubmit={handleSubmit} className="loginInputs">
-    <label>Username</label>
-    <input type="text" name="username" />
-    <label>Password</label>
-    <input type="text" name="password" />
-    <button type="submit" value="Submit">
+  <LoginInputs onSubmit={handleSubmit}>
+    <InputLabel>Username</InputLabel>
+    <InputText type="text" />
+    <InputLabel>Password</InputLabel>
+    <InputText type="text" />
+    <Button type="submit" bgColor="rgb(67, 154, 254)">
       Log In
-    </button>
-  </form>
+    </Button>
+  </LoginInputs>
 );
 
 const Login = () => (
-  <div className="twoSideGrid">
-    <div className="flexCentered logoSide">
-      <img src={logo} className="logo" alt="logo" />
-    </div>
-    <div className="flexCentered">{loginForm()}</div>
-    <div />
-  </div>
+  <AppLayout
+    leftSide={{ content: <Logo src={logo} alt="logo" />, bgColor: 'rgb(67, 154, 254)' }}
+    rightSide={{ content: loginForm() }}
+  />
 );
 
 export default Login;

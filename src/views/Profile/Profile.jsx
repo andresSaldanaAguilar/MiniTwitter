@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import NavBar from '../../components/NavBar';
 import Feed from '../../components/Feed';
 import './Profile.css';
 import user from '../../mocks/user.json';
+import AppLayout from '../../components/AppLayout';
 
 const Avatar = styled.img`
   width: 100px;
@@ -22,17 +22,16 @@ const userInfo = () => (
 );
 
 const Profile = () => (
-  <div className="twoSideGrid">
-    <div className="flexCentered">
-      <NavBar />
-    </div>
-    <div className="flexCentered">
-      <div>
-        {userInfo()}
-        <Feed />
-      </div>
-    </div>
-  </div>
+  <AppLayout
+    rightSide={{
+      content: (
+        <div>
+          {userInfo()}
+          <Feed />
+        </div>
+      ),
+    }}
+  />
 );
 
 export default Profile;
