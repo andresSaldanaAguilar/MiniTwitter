@@ -3,7 +3,7 @@
 import React from 'react';
 import logo from '../../img/logo.png';
 import user from '../../mocks/user.json';
-import { InputLabel, InputText, Button } from '../../App.Styled';
+import { InputLabel, InputText, Button } from '../../common/Elements.styled';
 import { LoginInputs, Logo } from './Login.styled';
 import AppLayout from '../../components/AppLayout';
 
