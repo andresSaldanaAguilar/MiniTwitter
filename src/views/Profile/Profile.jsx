@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -21,17 +22,22 @@ const userInfo = () => (
   </div>
 );
 
-const Profile = () => (
-  <AppLayout
-    rightSide={{
-      content: (
-        <div>
-          {userInfo()}
-          <Feed />
-        </div>
-      ),
-    }}
-  />
-);
+const Profile = (props) => {
+  const { sessionUser, unsetUser } = props;
+  return (
+    <AppLayout
+      sessionUser={sessionUser}
+      unsetUser={unsetUser}
+      rightSide={{
+        content: (
+          <div>
+            {userInfo()}
+            <Feed />
+          </div>
+        ),
+      }}
+    />
+  );
+};
 
 export default Profile;

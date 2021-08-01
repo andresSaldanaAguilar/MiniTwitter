@@ -1,35 +1,33 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import user from '../../mocks/user.json';
 import { InputLabel, InputText, Button, Logo } from '../../common/Elements.styled';
 import LoginInputs from './Login.styled';
 import AppLayout from '../../components/AppLayout';
+import useForm from '../../hooks/form';
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-  const username = event.target[0].value;
-  const password = event.target[1].value;
-  if (user.username === username && user.password === password) {
-    alert('successful login');
-  } else alert('incorrect username or/and password');
-};
-
-const loginForm = () => (
-  <LoginInputs onSubmit={handleSubmit}>
+const loginForm = (formValues, setFormValues, setUser) => (
+  <LoginInputs>
     <InputLabel>Username</InputLabel>
-    <InputText type="text" />
+    <InputText type="text" name="username" onChange={setFormValues} />
     <InputLabel>Password</InputLabel>
-    <InputText type="text" />
-    <Button type="submit">Log In</Button>
+    <InputText type="text" name="password" onChange={setFormValues} />
+    <Button onClick={() => setUser(formValues.username, formValues.password)}>Log In</Button>
   </LoginInputs>
 );
-const Login = () => (
-  <AppLayout
-    gridTemplateCol="50% 50%"
-    leftSide={{ content: <Logo height="200px" />, bgColor: 'rgb(67, 154, 254)' }}
-    rightSide={{ content: loginForm() }}
-  />
-);
+
+const Login = (props) => {
+  const { setUser } = props;
+  const [formValues, setFormValues] = useForm({ username: '', password: '' });
+  return (
+    <AppLayout
+      isLogin
+      gridTemplateCol="50% 50%"
+      leftSide={{ content: <Logo height="200px" />, bgColor: 'rgb(67, 154, 254)' }}
+      rightSide={{ content: loginForm(formValues, setFormValues, setUser) }}
+    />
+  );
+};
 
 export default Login;
