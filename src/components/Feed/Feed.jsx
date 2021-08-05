@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import tweets from '../../mocks/posts.json';
 import Post from '../Post';
+
+import { usePosts } from '../../providers/PostsProvider';
 
 export const orderByCreationDate = (a, b) => {
   const timeA = new Date(a.createdAt).getTime();
@@ -10,24 +11,28 @@ export const orderByCreationDate = (a, b) => {
   return timeB - timeA;
 };
 
-const Feed = () => (
-  <div>
+// eslint-disable-next-line react/prop-types
+const Feed = () => {
+  const { posts } = usePosts();
+  return (
     <div>
-      {tweets.sort(orderByCreationDate).map((tweet) => (
-        <Post
-          key={`tweet-${tweet.id}`}
-          name={tweet.author.name}
-          username={tweet.author.username}
-          avatar={tweet.author.image}
-          content={tweet.content}
-          comments={tweet.comments}
-          likes={tweet.likes}
-          retweets={tweet.retweets}
-          createdAt={tweet.createdAt}
-        />
-      ))}
+      <div>
+        {posts.sort(orderByCreationDate).map((tweet) => (
+          <Post
+            key={`tweet-${tweet.id}`}
+            name={tweet.author.name}
+            username={tweet.author.username}
+            avatar={tweet.author.image}
+            content={tweet.content}
+            comments={tweet.comments}
+            likes={tweet.likes}
+            retweets={tweet.retweets}
+            createdAt={tweet.createdAt}
+          />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Feed;

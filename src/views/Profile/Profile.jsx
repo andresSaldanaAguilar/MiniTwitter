@@ -8,6 +8,8 @@ import Feed from '../../components/Feed';
 import PostForm from '../../components/PostForm';
 import AppLayout from '../../components/AppLayout';
 
+import { usePosts } from '../../providers/PostsProvider';
+
 import './Profile.css';
 
 const Avatar = styled.img`
@@ -25,14 +27,12 @@ const userInfo = () => (
   </div>
 );
 
-// END ========
-
 const Profile = (props) => {
   const { sessionUser, unsetUser } = props;
+  const { createPost } = usePosts();
 
   const handlePost = (post) => {
-    // eslint-disable-next-line no-console
-    console.log(post);
+    createPost(post);
   };
 
   return (
