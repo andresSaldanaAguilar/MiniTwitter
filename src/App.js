@@ -8,8 +8,8 @@ import Profile from './views/Profile/Profile';
 
 function App() {
   const [sessionUser, setUser, unsetUser] = useSessionUser();
-  // return <Login/>;
-  return <Profile />;
+  return <Login />;
+  //return <Profile />;
 }
 
 export default App;
