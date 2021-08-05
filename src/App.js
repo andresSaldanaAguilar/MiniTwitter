@@ -9,7 +9,7 @@ import Profile from './views/Profile/Profile';
 function App() {
   const [sessionUser, setUser, unsetUser] = useSessionUser();
   // return <Login setUser={setUser} />;
-  // return <Profile sessionUser={sessionUser} unsetUser={unsetUser} />;
+  return <Profile sessionUser={sessionUser} unsetUser={unsetUser} />;
 }
 
 export default App;

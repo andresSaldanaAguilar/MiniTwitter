@@ -1,11 +1,14 @@
 /* eslint-disable react/prop-types */
+/* eslint-disable no-case-declarations */
 import React from 'react';
 import styled from 'styled-components';
 
-import Feed from '../../components/Feed';
-import './Profile.css';
 import user from '../../mocks/user.json';
+import Feed from '../../components/Feed';
+import PostForm from '../../components/PostForm';
 import AppLayout from '../../components/AppLayout';
+
+import './Profile.css';
 
 const Avatar = styled.img`
   width: 100px;
@@ -22,8 +25,16 @@ const userInfo = () => (
   </div>
 );
 
+// END ========
+
 const Profile = (props) => {
   const { sessionUser, unsetUser } = props;
+
+  const handlePost = (post) => {
+    // eslint-disable-next-line no-console
+    console.log(post);
+  };
+
   return (
     <AppLayout
       sessionUser={sessionUser}
@@ -32,6 +43,7 @@ const Profile = (props) => {
         content: (
           <div>
             {userInfo()}
+            <PostForm author={user} onPost={handlePost} />
             <Feed />
           </div>
         ),
