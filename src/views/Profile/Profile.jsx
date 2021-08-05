@@ -22,22 +22,17 @@ const userInfo = () => (
   </div>
 );
 
-const Profile = (props) => {
-  const { sessionUser, unsetUser } = props;
-  return (
-    <AppLayout
-      sessionUser={sessionUser}
-      unsetUser={unsetUser}
-      rightSide={{
-        content: (
-          <div>
-            {userInfo()}
-            <Feed />
-          </div>
-        ),
-      }}
-    />
-  );
-};
+const Profile = () => (
+  <AppLayout
+    rightSide={{
+      content: (
+        <div>
+          {userInfo()}
+          <Feed />
+        </div>
+      ),
+    }}
+  />
+);
 
 export default Profile;
